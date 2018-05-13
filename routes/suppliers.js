@@ -2,10 +2,11 @@
 
 var express = require('express');
 var router = express.Router();
-const Product = require('../models/product');
+const User = require('../models/user');
 
+// routes
 router.get('/', (req, res, next) => {
-  Product.find({})
+  User.find({role: 'supplier'})
     .then((result) => {
       res.json(result);
     })

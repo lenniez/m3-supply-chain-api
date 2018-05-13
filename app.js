@@ -13,6 +13,7 @@ const index = require('./routes/index');
 const orders = require('./routes/orders');
 const auth = require('./routes/auth');
 const categories = require('./routes/categories');
+const suppliers = require('./routes/suppliers');
 const products = require('./routes/products');
 
 // configure the app
@@ -57,6 +58,7 @@ app.use(cookieParser());
 app.use('/', index);
 app.use('/auth', auth);
 app.use('/categories', categories);
+app.use('/suppliers', suppliers);
 app.use('/products', products);
 app.use('/orders', orders);
 

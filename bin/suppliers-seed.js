@@ -10,9 +10,9 @@ const allSuppliers = [{
     photoUrl: 'https://www.fabric-brand.com/wp-content/uploads/2016/08/FBFACTORY020.jpg'
   },
   products: [{
-    supplier: null,
     name: "Air Max 270 - Women's",
     photoUrl: 'https://sneakerspaza.co.za/wp-content/uploads/2016/12/adidas-yeezy-boost-350-v2-steel-grey-beluga-solar-red.jpg',
+    supplier: null,
     subComponents: [{
       subComponentName: 'Subcomponent1',
       subSupplierName: 'Subsupplier1',
