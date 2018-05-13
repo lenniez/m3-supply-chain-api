@@ -13,6 +13,7 @@ const productSchema = new Schema({
     required: true
   },
   name: String,
+  photoUrl: String,
   subComponents: [{
     subComponentName: String,
     subSupplierName: String,

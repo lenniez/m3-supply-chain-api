@@ -1,15 +1,7 @@
 'use strict';
 
 const categories = {
-  footwear: {
-    label: 'footwear'
-  },
-  eyewear: {
-    label: 'eyewear'
-  },
-  apparel: {
-    label: 'apparel'
-  }
+  labels: ['footwear', 'eyewear', 'handbags', 'clothing', 'timepieces']
 };
 
 module.exports = categories;

@@ -11,7 +11,8 @@ const allSuppliers = [{
   },
   products: [{
     supplier: null,
-    productName: "Air Max 270 - Women's",
+    name: "Air Max 270 - Women's",
+    photoUrl: 'https://sneakerspaza.co.za/wp-content/uploads/2016/12/adidas-yeezy-boost-350-v2-steel-grey-beluga-solar-red.jpg',
     subComponents: [{
       subComponentName: 'Subcomponent1',
       subSupplierName: 'Subsupplier1',
