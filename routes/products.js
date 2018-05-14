@@ -12,4 +12,12 @@ router.get('/', (req, res, next) => {
     .catch(next);
 });
 
+router.get('/:id', (req, res, next) => {
+  Product.findById(req.params.id)
+    .then((result) => {
+      res.json(result);
+    })
+    .catch(next);
+});
+
 module.exports = router;

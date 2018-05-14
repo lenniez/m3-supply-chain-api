@@ -10,11 +10,11 @@ const session = require('express-session');
 const MongoStore = require('connect-mongo')(session);
 
 const index = require('./routes/index');
-const orders = require('./routes/orders');
 const auth = require('./routes/auth');
 const categories = require('./routes/categories');
 const suppliers = require('./routes/suppliers');
 const products = require('./routes/products');
+const orders = require('./routes/orders');
 
 // configure the app
 const app = express();

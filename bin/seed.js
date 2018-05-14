@@ -5,6 +5,7 @@ const bcrypt = require('bcrypt');
 
 const User = require('../models/user');
 const Product = require('../models/product');
+const Order = require('../models/order');
 
 const allSuppliers = require('./suppliers-seed');
 const allBrands = require('./brands-seed');
@@ -63,8 +64,9 @@ function createBrands (brands) {
 
 const deleteProducts = Product.remove();
 const deleteUsers = User.remove();
+const deleteOrders = Order.remove();
 
-Promise.all([deleteProducts, deleteUsers])
+Promise.all([deleteProducts, deleteUsers, deleteOrders])
   // create seed brand users
   .then(() => createBrands(allBrands))
   // create seed supplier users and products
