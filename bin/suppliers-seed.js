@@ -2,41 +2,41 @@
 
 const allSuppliers = [{
   user: {
-    username: 'supplier1',
+    username: 'SSIPL RETAIL',
     email: 'supplier1@gmail.com',
-    password: 'supplier1',
+    password: 'SSIPL',
     role: 'supplier',
     category: 'footwear',
     photoUrl: 'https://www.fabric-brand.com/wp-content/uploads/2016/08/FBFACTORY020.jpg'
   },
   products: [{
     name: "Air Max 270 - Women's",
-    photoUrl: 'https://sneakerspaza.co.za/wp-content/uploads/2016/12/adidas-yeezy-boost-350-v2-steel-grey-beluga-solar-red.jpg',
+    photoUrl: 'https://image.ibb.co/khHZAd/airmax270.png',
     supplier: null,
     subComponents: [{
-      subComponentName: 'Subcomponent1',
-      subSupplierName: 'Subsupplier1',
-      photoUrl: 'https://sneakerspaza.co.za/wp-content/uploads/2016/12/adidas-yeezy-boost-350-v2-steel-grey-beluga-solar-red.jpg'
+      subComponentName: 'Rubber',
+      subSupplierName: 'Prathiba Syntex Ltd',
+      photoUrl: 'https://image.ibb.co/mdWEbJ/rubber.png'
     }, {
-      subComponentName: 'Subcomponent2',
-      subSupplierName: 'Subsupplier2',
-      photoUrl: 'https://sneakerspaza.co.za/wp-content/uploads/2016/12/adidas-yeezy-boost-350-v2-steel-grey-beluga-solar-red.jpg'
+      subComponentName: 'Eva foam',
+      subSupplierName: 'Ashkaya Sportwear Ltd',
+      photoUrl: 'https://image.ibb.co/hhjEAd/eva_foam.png'
     }, {
-      subComponentName: 'Subcomponent3',
-      subSupplierName: 'Subsupplier3',
-      photoUrl: 'https://sneakerspaza.co.za/wp-content/uploads/2016/12/adidas-yeezy-boost-350-v2-steel-grey-beluga-solar-red.jpg'
+      subComponentName: 'Leather',
+      subSupplierName: 'Elta Company Ltd',
+      photoUrl: 'https://image.ibb.co/hmN1qd/leather.png'
     }, {
-      subComponentName: 'Subcomponent4',
-      subSupplierName: 'Subsupplier4',
-      photoUrl: 'https://sneakerspaza.co.za/wp-content/uploads/2016/12/adidas-yeezy-boost-350-v2-steel-grey-beluga-solar-red.jpg'
+      subComponentName: 'Polyester',
+      subSupplierName: 'Vega Ltd',
+      photoUrl: 'https://image.ibb.co/keH1qd/polyester.png'
     }, {
-      subComponentName: 'Subcomponent5',
-      subSupplierName: 'Subsupplier5',
-      photoUrl: 'https://sneakerspaza.co.za/wp-content/uploads/2016/12/adidas-yeezy-boost-350-v2-steel-grey-beluga-solar-red.jpg'
+      subComponentName: 'Cotton',
+      subSupplierName: 'Future Garment Ltd',
+      photoUrl: 'https://image.ibb.co/ebTViy/cotton.png'
     }, {
-      subComponentName: 'Subcomponent6',
-      subSupplierName: 'Subsupplier6',
-      photoUrl: 'https://sneakerspaza.co.za/wp-content/uploads/2016/12/adidas-yeezy-boost-350-v2-steel-grey-beluga-solar-red.jpg'
+      subComponentName: 'Synthetic leather',
+      subSupplierName: 'Nan Yang Co. Ltd',
+      photoUrl: 'https://image.ibb.co/eTPEAd/synthetic_leather.png'
     }]
   }]
 }];
