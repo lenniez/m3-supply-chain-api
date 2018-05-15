@@ -6,7 +6,6 @@ const Order = require('../models/order');
 
 router.get('/:userId', (req, res, next) => {
 // Find and send all orders where either the supplier or brand ids match that of the signed in user
-
   Order.find({ $or: [{ 'brand': req.params.userId }, { 'supplier': req.params.userId }] })
     .populate('product supplier brand')
     .then((result) => {
