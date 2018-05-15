@@ -26,12 +26,12 @@ const orderSchema = new Schema({
     ref: 'Product',
     required: true
   },
-  brandId: {
+  brand: {
     type: ObjectId,
     ref: 'User',
     required: true
   },
-  supplierId: {
+  supplier: {
     type: ObjectId,
     ref: 'User',
     required: true

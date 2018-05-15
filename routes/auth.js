@@ -8,7 +8,14 @@ const User = require('../models/user');
 
 router.get('/me', (req, res, next) => {
   if (req.session.currentUser) {
-    res.json(req.session.currentUser);
+    User.findById(req.session.currentUser._id)
+      .then((result) => {
+        // if (!result) {
+        //   req.session.currentUser = null;
+        //   return res.status(404).json({ code: 'not-found' });
+        // }
+        res.json(req.session.currentUser);
+      });
   } else {
     res.status(404).json({ code: 'not-found' });
   }

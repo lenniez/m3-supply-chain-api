@@ -11,7 +11,7 @@ const allSuppliers = [{
   },
   products: [{
     name: "Air Max 270 - Women's",
-    photoUrl: 'https://image.ibb.co/khHZAd/airmax270.png',
+    photoUrl: 'https://image.ibb.co/dT4cFd/airmax270.png',
     supplier: null,
     subComponents: [{
       subComponentName: 'Rubber',
