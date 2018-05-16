@@ -3,6 +3,7 @@
 const express = require('express');
 const router = express.Router();
 const Order = require('../models/order');
+const mongoose = require('mongoose');
 
 router.get('/:userId', (req, res, next) => {
 // Find and send all orders where either the supplier or brand ids match that of the signed in user
@@ -32,6 +33,34 @@ router.post('/placeorder', (req, res, next) => {
   newOrder.save()
     .then((result) => {
       res.status(201).json({ code: 'order created' });
+    })
+    .catch(next);
+});
+
+// change back to a post later
+router.get('/step/:stepId', (req, res, next) => {
+  // This is to allow the update page to refresh with the new db data without refreshing the page
+  const options = {
+    'new': true
+  };
+
+  // if there is no step with this id
+  if (!mongoose.Types.ObjectId.isValid(req.params.stepId)) {
+    return res.status(422).json({ code: 'unprocessable-entity' });
+  }
+
+  Order.findOne({ orderStatus: { $elemMatch: { _id: req.params.stepId } } })
+    .then((result) => {
+      if (!result) {
+        return res.status(404).json({ code: 'not-found' });
+      }
+      // result.orderstatus;
+
+      // result.save()
+      //   .then(() => {
+      //     res.json(result);
+      // })
+      // .catch(next);
     })
     .catch(next);
 });

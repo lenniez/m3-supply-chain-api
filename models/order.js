@@ -2,6 +2,7 @@
 
 const mongoose = require('mongoose');
 const Schema = mongoose.Schema;
+// const OrderStep = require('../models/orderstep');
 
 const ObjectId = Schema.Types.ObjectId;
 
@@ -15,9 +16,6 @@ const orderStatusSchema = new Schema({
   role: {
     type: String
   }
-},
-{
-  _id: false
 });
 
 const orderSchema = new Schema({
