@@ -8,6 +8,7 @@ const cors = require('cors');
 const mongoose = require('mongoose');
 const session = require('express-session');
 const MongoStore = require('connect-mongo')(session);
+require('dotenv').config();
 
 const index = require('./routes/index');
 const auth = require('./routes/auth');
@@ -21,7 +22,7 @@ const app = express();
 
 // set up mongo
 mongoose.Promise = Promise;
-mongoose.connect('mongodb://localhost/supply-chain-db', {
+mongoose.connect(process.env.MONGODB_URI, {
   keepAlive: true,
   reconnectTries: Number.MAX_VALUE
 });
@@ -29,7 +30,7 @@ mongoose.connect('mongodb://localhost/supply-chain-db', {
 // middlewares
 app.use(cors({
   credentials: true,
-  origin: ['http://localhost:4200']
+  origin: [process.env.CLIENT_URL]
 }));
 
 app.use(session({
