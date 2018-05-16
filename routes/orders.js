@@ -38,7 +38,7 @@ router.post('/placeorder', (req, res, next) => {
 });
 
 // change back to a post later
-router.get('/step/:stepId', (req, res, next) => {
+router.put('/step/:stepId', (req, res, next) => {
   // This is to allow the update page to refresh with the new db data without refreshing the page
   const options = {
     'new': true
@@ -54,13 +54,20 @@ router.get('/step/:stepId', (req, res, next) => {
       if (!result) {
         return res.status(404).json({ code: 'not-found' });
       }
-      // result.orderstatus;
 
-      // result.save()
-      //   .then(() => {
-      //     res.json(result);
-      // })
-      // .catch(next);
+      // find first step in orderStatus array that has a status === false
+      const nextStep = result.orderStatus.find((step) => {
+        return step.status === false;
+      });
+
+      // set next step's value to true (completed)
+      nextStep.status = true;
+
+      // save updated order
+      result.save()
+        .then(() => {
+          res.json(result);
+        });
     })
     .catch(next);
 });
