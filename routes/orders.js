@@ -66,6 +66,7 @@ router.put('/step/:stepId', (req, res, next) => {
       // save updated order
       result.save()
         .then(() => {
+          // console.log(result);
           res.json(result);
         });
     })

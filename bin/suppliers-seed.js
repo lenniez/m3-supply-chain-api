@@ -2,15 +2,15 @@
 
 const allSuppliers = [{
   user: {
-    username: 'SSIPL RETAIL',
+    username: 'LZ RETAIL',
     email: 'supplier1@gmail.com',
-    password: 'SSIPL',
+    password: 'LZ RETAIL',
     role: 'supplier',
     category: 'footwear',
     photoUrl: 'https://www.fabric-brand.com/wp-content/uploads/2016/08/FBFACTORY020.jpg'
   },
   products: [{
-    name: "Air Max 270 - Women's",
+    name: 'Air Max 270',
     photoUrl: 'https://image.ibb.co/dT4cFd/airmax270.png',
     supplier: null,
     subComponents: [{
@@ -38,6 +38,14 @@ const allSuppliers = [{
       subSupplierName: 'Nan Yang Co. Ltd',
       photoUrl: 'https://image.ibb.co/eTPEAd/synthetic_leather.png'
     }]
+  }, {
+    name: 'Air Zoom Vomero',
+    photoUrl: 'https://image.ibb.co/eBxA3y/vomero.png',
+    supplier: null
+  }, {
+    name: 'Free RN Flyknit',
+    photoUrl: 'https://image.ibb.co/bHeq3y/free_rn.png',
+    supplier: null
   }]
 }];
 

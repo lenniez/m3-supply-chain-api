@@ -1,9 +1,9 @@
 'user-strict';
 
 const allBrands = [{
-  username: 'brand1',
-  email: 'brand1@gmail.com',
-  password: 'brand1',
+  username: 'BRANDY',
+  email: 'brandy@gmail.com',
+  password: 'BRANDY',
   role: 'brand'
 }];
 
