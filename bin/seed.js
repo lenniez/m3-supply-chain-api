@@ -12,8 +12,8 @@ const allBrands = require('./brands-seed');
 
 mongoose.Promise = Promise;
 // web v. local db connection options - only one should be uncommented at a time
-// mongoose.connect('mongodb://lennie:lennie@ds229909.mlab.com:29909/supply-chain-db', {
-mongoose.connect('mongodb://localhost/supply-chain-db', {
+mongoose.connect('mongodb://lennie:lennie@ds229909.mlab.com:29909/supply-chain-db', {
+// mongoose.connect('mongodb://localhost/supply-chain-db', {
   keepAlive: true,
   reconnectTries: Number.MAX_VALUE
 });
